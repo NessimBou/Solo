@@ -53,7 +53,19 @@ public class Planning {
 		return ServiceRefused.serviceRefused("Rdv Exist", 7);
 		
 	}
-	
+	/**Supprimer un rendez vous
+	 * 
+	 * @param id : id du rendez vous
+	 * @param titre : titre du rendez vous 
+	 * @param jour : jour du rendez vous
+	 * @param mois : mois du rendez vous
+	 * @param annee : annee du rendez vous
+	 * @param heure : heure du rendez vous 
+	 * @param minute : minute du rendez vous
+	 * @return
+	 * @throws UnknownHostException
+	 * @throws JSONException
+	 */
 	public static JSONObject supprimerRdv(String id,String titre,String jour,String mois,String annee,String heure,String minute) throws UnknownHostException, JSONException{
 		
 		JSONObject ret = new JSONObject();
