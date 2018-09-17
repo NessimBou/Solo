@@ -76,8 +76,27 @@ public class Planning {
 		return ServiceRefused.serviceRefused("Rdv Exist pas", 9);
 	}
 	
-//	public static JSONObject modifierRdv(String id, String titre, String jour, String mois, String annee, String heure, String minute){
-//		
-//	}
+	
+	/**
+	 * Modifier les données du rdv
+	 * @param id : id  du rdv
+	 * @param titre : titre du rdv
+	 * @param jour : jour du rdv 
+	 * @param mois : mois du rdv
+	 * @param annee : annee du rdv
+	 * @param heure : heure du rdv
+	 * @param minute : minute du rdv 
+	 * @return JSON
+	 * @throws UnknownHostException 
+	 * @throws JSONException 
+	 */
+	public static JSONObject modifierRdv(String id, String titre, String jour, String mois, String annee, String heure, String minute) throws UnknownHostException, JSONException{
+		JSONObject ret = new JSONObject();
+		if(BdPlanning.IdExist(id)) {
+			ret = BdPlanning.modifierRdv(id,titre,jour,mois,annee,heure,minute);
+			return ret;
+		}
+		return ServiceRefused.serviceRefused("le Rdv n'existe pas", 9);
+	}
 	
 }
