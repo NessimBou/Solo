@@ -109,6 +109,7 @@ public class BdPlanning {
 		JSONObject ret = new JSONObject();
 		DBCollection col = Database.getCollection("planning");
 		BasicDBObject query = new BasicDBObject();
+		
 		//query.put("", arg1)
 		return null;
 	}
