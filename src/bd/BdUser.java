@@ -99,7 +99,7 @@ public class BdUser {
 	/**
 	 * Connexion de l'utilisateur
 	 * @param login utilisateur
-	 * @return La clé de connexion
+	 * @return La clï¿½ de connexion
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
 	 * @throws JSONException
@@ -152,7 +152,7 @@ public class BdUser {
 	
 	
 	/**
-	 * Methode permettant d'avoir le login à partir de la clé 
+	 * Methode permettant d'avoir le login ï¿½ partir de la clï¿½ 
 	 * @param key de connexion 
 	 * @return login 
 	 * @throws SQLException

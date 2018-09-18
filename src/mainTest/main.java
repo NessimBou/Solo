@@ -23,21 +23,21 @@ public class main {
 		String nom = "coucou" ;
 		String prenom = "coucou";
 		String test = "salut";
-		
-	//	System.out.println(User.createUser(login, password, nom, prenom));
-	//	User.login(login,password);
 		Connection sql= bd.Database.getMySQLConnection();
-		DBCollection mango = bd.Database.getCollection("planning");
-		System.out.println(Planning.supprimerRdv(login,test,"5","10","2015","5","4"));
+		System.out.println(User.createUser(login, password, nom, prenom));
+		User.login(login,password);
 		
-	//s	String key = BdTools.getKey(login);
-//		System.out.println(user.logout(key));
+	//	DBCollection mango = bd.Database.getCollection("planning");
+	//	System.out.println(Planning.supprimerRdv(login,test,"5","10","2015","5","4"));
+		
+		String key = BdUser.getKey(login);
+	//	System.out.println(user.logout(key));
 	
 	
 	//	System.out.println(BdUser.samePass(login,test));
-		System.out.println(User.login(login, password));
-		String key = BdUser.getKey(login);
-		System.out.println(User.logout(key));
+	//	System.out.println(User.login(login, password));
+	//	String key = BdUser.getKey(login);
+	//	System.out.println(User.logout(key));
 //		Statement lecture = sql.createStatement();
 //		ResultSet curseur = lecture.executeQuery("Select t from session where idUser = '"+login+"';");
 //		while (curseur.next()){
