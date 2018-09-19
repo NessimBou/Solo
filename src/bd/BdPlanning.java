@@ -113,4 +113,6 @@ public class BdPlanning {
 		//query.put("", arg1)
 		return null;
 	}
+	
+	//public static ObjectId getIdRdv(String )
 }

@@ -19,18 +19,19 @@ public class main {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException, JSONException, UnknownHostException {
 
 		String login = "coucou";
-		String password = "coucou";
-		String nom = "coucou" ;
-		String prenom = "coucou";
+		//String password = "coucou";
+//		String nom = "coucou" ;
+//		String prenom = "coucou";
 		String test = "salut";
 		Connection sql= bd.Database.getMySQLConnection();
-		System.out.println(User.createUser(login, password, nom, prenom));
-		User.login(login,password);
+		//System.out.println(User.createUser(login, password, nom, prenom));
+		//User.login(login,password);
 		
-	//	DBCollection mango = bd.Database.getCollection("planning");
-	//	System.out.println(Planning.supprimerRdv(login,test,"5","10","2015","5","4"));
+		DBCollection mango = bd.Database.getCollection("planning");
+		//ystem.out.println(Planning.ajoueRDV(login, test, "5", "5", "5", "5", "5"));
+		System.out.println(Planning.supprimerRdv(login, test, "5", "5", "5", "5", "5"));
 		
-		String key = BdUser.getKey(login);
+	//	String key = BdUser.getKey(login);
 	//	System.out.println(user.logout(key));
 	
 	
