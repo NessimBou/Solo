@@ -10,9 +10,9 @@ import javafx.*;
 public class Interface extends JFrame implements ActionListener{
 	
 	  private JPanel container = new JPanel();
-	  //Tableau stockant les éléments à afficher dans la calculatrice
+	  //Tableau stockant les ï¿½lï¿½ments ï¿½ afficher dans la calculatrice
 	  String[] tab_string = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "=", "C", "+", "-", "*", "/"};
-	  //Un bouton par élément à afficher
+	  //Un bouton par ï¿½lï¿½ment ï¿½ afficher
 	  JButton[] tab_button = new JButton[tab_string.length];
 	  private JLabel ecran = new JLabel();
 	  private Dimension dim = new Dimension(50, 40);
@@ -48,15 +48,102 @@ public class Interface extends JFrame implements ActionListener{
 		  JPanel ecran1 = new JPanel();
 		  ecran1.setPreferredSize(new Dimension(55,220));
 		  
-		  
+		  for (int i = 0;i < tab_string.length; i++) {
+			  tab_button[i] = new JButton(tab_string[i]);
+			  tab_button[i].setPreferredSize(dim);
+			  switch(i) {
+			  	case 11:
+			  		tab_button[i].addActionListener(new EgalListener());
+			  		chiffre.add(tab_button[i]);
+			  		break;
+			  	case 12:
+			  		tab_button[i].addActionListener(new SuppListener());
+			  		operateur.add(tab_button[i]);
+			  		operateur.setPreferredSize(dim2);
+			  		break;
+			  	case 13:
+			  		tab_button[i].addActionListener(new PlusListener());
+			  		operateur.add(tab_button[i]);
+			  		operateur.setPreferredSize(dim2);
+			  		break;
+			  	case 14:
+			  		tab_button[i].addActionListener(new MoinsListener());
+			  		operateur.add(tab_button[i]);
+			  		operateur.setPreferredSize(dim2);
+			  		break;
+			  	case 15:
+			  		tab_button[i].addActionListener(new FoisListener());
+			  		operateur.add(tab_button[i]);
+			  		operateur.setPreferredSize(dim2);
+			  		break;
+			  	case 16:
+			  		tab_button[i].addActionListener(new DivListener());
+			  		operateur.add(tab_button[i]);
+			  		operateur.setPreferredSize(dim2);
+			  		break;
+			  	
+			  }
+		  }
 	  }
 
+	  public void calcul() {
+		  
+	  }
+	  
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	      
+	
+	
+	public class EgalListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
+	public class SuppListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+	
+	public class PlusListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+	
+	public class MoinsListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+	
+	public class FoisListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+	
+	public class DivListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e) {
+			
+		}
+	}
+}
+
+
 	
 
-}
+
